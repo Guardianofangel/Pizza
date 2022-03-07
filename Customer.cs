@@ -6,28 +6,8 @@ namespace Pizza
 {
     class Customer
     {
-        private string last;
-        private string first;
 
-        public Customer()
-        {
-        }
-
-        public Customer(string c)
-        {
-            C = c;
-        }
-
-        public Customer(string lastName, string firstName) 
-        {
-            last = lastName;
-            first = firstName;
-        }
-
-        public string C { get; }
-
-
-        /*  //Vi får oprettet objekter i vores i vores Customer klasse
+        //Vi får oprettet objekter i vores i vores Customer klasse
         private string _customerName;
         private string _customerAdress;
         private int _customerNumber;
@@ -40,30 +20,36 @@ namespace Pizza
             _customerNumber = customerNumber;
             _customerEmail = customerEmail;
         }
-         
-         public string customerName
-        { 
+        //oprettelse af constructor
+        public string CustomerName
+        {
             get { return _customerName; }
-            set { _customerName = customerName; }
+            set { _customerName = value; }
         }
-        public string customerAdress
+        public string CustomerAdress
         {
             get { return _customerAdress; }
-            set { _customerAdress = customerAdress; }
+            set { _customerAdress = value; }
         }
-        public int customerNumber
+        public int CustomerNumber
         {
-            get {return _customerNumber;}
-            set { _customerNumber = customerNumber; }
+            get { return _customerNumber; }
+            set { _customerNumber = value; }
         }
-        public string customerEmail
+        public string CustomerEmail
         {
-            get {return _customerEmail; }
-            set {_customerEmail = customerEmail; }
-        
-       
-        */
-    }
+            get { return _customerEmail; }
+            set { _customerEmail = value; }
+        }
+        // Oprettelse af tostring metode
+            public override string ToString()
+        {
+            return "Name: " + _customerName +  "\n" + "Adress: " + _customerAdress + "\n" + "Housenumber: " + _customerNumber + "\n" + "Email: " + _customerEmail; 
+        }
+
 
     }
+    }
+
+    
 

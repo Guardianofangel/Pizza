@@ -6,103 +6,50 @@ namespace Pizza
 {
     class Pizza
     {
-        //Globale variabler. Gør sig gældende til hele klassen//
-        private string _pizzaA;
-        private string _pizzaB;
-        private string _pizzaC;
+        // oprettelse af objekter
+        private string _name;
+        private string _topping;
+        private double price;
 
-        private string _toppingA;
-        private string _toppingB;
-        private string _toppingC;
+        //oprettelse af properties
+        public Pizza(string name, string topping, double price)
 
-        private int _priceA = 50;
-        private int _priceB = 55;
-        private int _priceC = 60;
 
-        public Pizza(string pizzaA, string pizzaB, string pizzaC, string toppingA, string toppingB, string toppingC, int priceA, int priceB, int priceC)
         {
-            _pizzaA = pizzaA;
-            _pizzaB = pizzaB;
-            _pizzaC = pizzaC;
-            _toppingA = toppingA;
-            _toppingB = toppingB;
-            _toppingC = toppingC;
-            _priceA = priceA;
-            _priceB = priceB;
-            _priceC = priceC;
-        }
-        public string pizzaA
-        {
-            get { return _pizzaA; }
-            set { _pizzaA = pizzaA; }
-        }
-        public string pizzaB
-        {
-            get { return _pizzaB; }
-            set { _pizzaB = pizzaB; }
-        }
-        public string pizzaC
-        {
-            get { return _pizzaC; }
-            set { _pizzaC = pizzaC; }
-        }
-        public string toppingA
-        {
-            get { return _toppingA; }
-            set { _toppingA = toppingA; }
-        }
-        public string toppingB
-        {
-            get { return toppingB; }
-            set { _toppingB = toppingB; }
-        }
-        public string toppingC
-        {
-            get { return toppingC; }
-            set { _toppingC = toppingC; }
-        }
-        public int priceA
-        {
-            get { return _priceA; }
-            set { _priceA = priceA; }
-        }
-        public int priceB
-        {
-            get { return _priceB; }
-            set { _priceB = priceB;}
-        }
-        public int priceC
-        {
-            get { return _priceC; }
-            set { _priceC = priceC; }
+            _name = name;
+            _topping = topping;
+            this.price = price;
 
         }
-            
-            /*{
-        this.pizzaA = pizzaA;
-        this.pizzaB = pizzaB;
-        this.pizzaC = pizzaC;
-        this.toppingA = toppingA;
-        this.toppingB = toppingB;
-        this.toppingC = toppingC;
-        this.priceA = priceA;
-        this.priceB = priceB;
-        this.priceC = priceC; 
-    }
-    public void SetPizzaA(string pizzaA)
-    {
-        this.pizzaA = pizzaA;
-    }
-    public string GetPizzaA()
-    {
-        return pizzaA;
-    }
-    public void setpizzaB(string pizzaB)
-    {
-        this.pizzaB = pizzaB;
-    }
-    return pizzaB;
-    */
+        //oprettelse af constructor
+        public string Name
+        {
+            get { return _name; }
+            set { _name = value; }
+        }
+        public string Topping
+        {
+            get { return _topping; }
+            set { _topping = value; }
+        }
+        public void SetPrice(double price)
+        {
+            this.price = price;
+        }
+        public double GetPrice()
+        {
+            return price;
+        }
+
+        // oprettelse af tostring metode
+        public override string ToString()
+        {
+            return "\n" + "Order: " + _name + "with " + _topping + "\n" + "Price: " + this.price + "DKK";
+        }
 
     }
-}
+}    
+
+     
+
+    
